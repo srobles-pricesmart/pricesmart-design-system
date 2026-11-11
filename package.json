@@ -1,0 +1,15 @@
+{
+  "name": "pricesmart-design-system",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=packages/pricesmart-ds",
+    "dev": "npm run dev --workspace=packages/pricesmart-ds",
+    "storybook": "npm run storybook --workspace=apps/storybook",
+    "build-storybook": "npm run build-storybook --workspace=apps/storybook",
+    "demo": "npm run dev --workspace=apps/demo"
+  }
+}

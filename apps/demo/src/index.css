@@ -1,0 +1,18 @@
+/*
+ * 1. Importá los CSS tokens del DS (custom properties)
+ *    — necesario para que los colores, tipografía y espaciado funcionen
+ */
+@import '@pricesmart/ds/styles';
+
+/*
+ * 2. Directivas de Tailwind
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--ps-font-family-sans);
+  background-color: var(--ps-color-bg-subtle);
+  color: var(--ps-color-fg-default);
+}
