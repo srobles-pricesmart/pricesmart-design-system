@@ -76,11 +76,13 @@ const preset: Config = {
       },
 
       borderRadius: {
+        'ps-xs':   'var(--ps-radius-xs)',
         'ps-sm':   'var(--ps-radius-sm)',
         'ps-md':   'var(--ps-radius-md)',
         'ps-lg':   'var(--ps-radius-lg)',
         'ps-xl':   'var(--ps-radius-xl)',
         'ps-2xl':  'var(--ps-radius-2xl)',
+        'ps-3xl':  'var(--ps-radius-3xl)',
         'ps-full': 'var(--ps-radius-full)',
       },
 

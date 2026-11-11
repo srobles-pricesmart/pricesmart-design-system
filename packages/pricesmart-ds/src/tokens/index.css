@@ -1,13 +1,10 @@
 /*
  * PriceSmart Design System — CSS Tokens
+ * Source: Design System Master Library VARIABLES v4.1
+ * Figma file: uv426oS23GgupkpwKd8Efy / node 2210:441096
+ * Extracted via Figma MCP — 2026-11-11
  *
- * Inferidos del Figma "Design System Master Library VARIABLES v4.1"
- * Figma node: 2210-441096
- *
- * PENDING: Reemplazar los valores con los exactos del archivo Figma
- * una vez que el equipo provea token de acceso o exportación de variables.
- *
- * Estructura de tokens:
+ * Estructura:
  *   --ps-primitive-*   → paleta base (sin semántica)
  *   --ps-color-*       → tokens semánticos de color
  *   --ps-radius-*      → border radius
@@ -17,67 +14,116 @@
  */
 
 :root {
-  /* ─── Primitive palette ───────────────────────────────────── */
-  /* Blue (brand primary) */
-  --ps-primitive-blue-50:  #E8EEF7;
-  --ps-primitive-blue-100: #C5D3EC;
-  --ps-primitive-blue-200: #9EB5DF;
-  --ps-primitive-blue-300: #7797D2;
-  --ps-primitive-blue-400: #5880C8;
-  --ps-primitive-blue-500: #3A6ABF;
-  --ps-primitive-blue-600: #2855A8;
-  --ps-primitive-blue-700: #1A3F8F;
-  --ps-primitive-blue-800: #0F2C73;
-  --ps-primitive-blue-900: #061C57;  /* ← PriceSmart Navy ~#002D6E */
-  --ps-primitive-blue-950: #030E30;
+  /* ── Primitive palette ──────────────────────────────────────── */
 
-  /* Red (brand accent / danger) */
-  --ps-primitive-red-50:   #FDECEA;
-  --ps-primitive-red-100:  #F9C5C0;
-  --ps-primitive-red-200:  #F49B95;
-  --ps-primitive-red-300:  #EF706A;
-  --ps-primitive-red-400:  #E94741;
-  --ps-primitive-red-500:  #D93025;
-  --ps-primitive-red-600:  #C8102E;  /* ← PriceSmart Red */
-  --ps-primitive-red-700:  #A80C25;
-  --ps-primitive-red-800:  #870A1D;
-  --ps-primitive-red-900:  #650716;
+  /* Brand Primary (blue scale) — confirmed from Figma */
+  --ps-primitive-blue-25:  #FCFAFF;
+  --ps-primitive-blue-50:  #F0F5FE;
+  --ps-primitive-blue-100: #CFE4FF;
+  --ps-primitive-blue-200: #9FC9FF;
+  --ps-primitive-blue-300: #6FAEFF;
+  --ps-primitive-blue-400: #2174E1;
+  --ps-primitive-blue-500: #2950BA;
+  --ps-primitive-blue-600: #23376D; /* "Type Blue" — base brand text color */
+  --ps-primitive-blue-700: #182958;
+  --ps-primitive-blue-800: #121F42;
+  --ps-primitive-blue-900: #0C152C;
+  --ps-primitive-blue-950: #060816;
 
-  /* Neutral (grays) */
+  /* Brand Accent (orange scale) — confirmed from Figma */
+  --ps-primitive-orange-25:  #FFF9F5;
+  --ps-primitive-orange-50:  #FFF4ED;
+  --ps-primitive-orange-100: #FFE6D5;
+  --ps-primitive-orange-200: #FFD6AE;
+  --ps-primitive-orange-300: #FF9C66;
+  --ps-primitive-orange-400: #FF692E;
+  --ps-primitive-orange-500: #DC3D22;
+  --ps-primitive-orange-600: #CC2C14;
+  --ps-primitive-orange-700: #BC1B06;
+  --ps-primitive-orange-800: #97180C;
+  --ps-primitive-orange-900: #771A0D;
+  --ps-primitive-orange-950: #57130A;
+
+  /* Gray — light mode — confirmed from Figma */
   --ps-primitive-neutral-0:   #FFFFFF;
-  --ps-primitive-neutral-50:  #F7F8FA;
-  --ps-primitive-neutral-100: #EFF1F5;
-  --ps-primitive-neutral-200: #E0E3EB;
-  --ps-primitive-neutral-300: #C8CDD9;
-  --ps-primitive-neutral-400: #A6AFBE;
-  --ps-primitive-neutral-500: #7A8699;
-  --ps-primitive-neutral-600: #5A6678;
-  --ps-primitive-neutral-700: #3D4A5C;
-  --ps-primitive-neutral-800: #252E3D;
-  --ps-primitive-neutral-900: #131A26;
-  --ps-primitive-neutral-950: #090D14;
+  --ps-primitive-neutral-25:  #FCFCFD;
+  --ps-primitive-neutral-50:  #F9FAFB;
+  --ps-primitive-neutral-100: #F2F4F7;
+  --ps-primitive-neutral-200: #E4E7EC;
+  --ps-primitive-neutral-300: #D0D5DD;
+  --ps-primitive-neutral-400: #98A2B3;
+  --ps-primitive-neutral-500: #667085;
+  --ps-primitive-neutral-600: #475467;
+  --ps-primitive-neutral-700: #344054;
+  --ps-primitive-neutral-800: #1D2939;
+  --ps-primitive-neutral-900: #101828;
+  --ps-primitive-neutral-950: #0C111D;
 
-  /* Green (success) */
-  --ps-primitive-green-50:  #E9F7EE;
-  --ps-primitive-green-100: #C5EACF;
-  --ps-primitive-green-500: #2E8A4B;
-  --ps-primitive-green-600: #237A3E;
-  --ps-primitive-green-700: #196B31;
+  /* Gray — dark mode — confirmed from Figma */
+  --ps-primitive-gray-dark-25:  #FAFAFA;
+  --ps-primitive-gray-dark-50:  #F5F5F6;
+  --ps-primitive-gray-dark-100: #F0F1F1;
+  --ps-primitive-gray-dark-200: #ECECED;
+  --ps-primitive-gray-dark-300: #CECFD2;
+  --ps-primitive-gray-dark-400: #94969C;
+  --ps-primitive-gray-dark-500: #85888E;
+  --ps-primitive-gray-dark-600: #61646C;
+  --ps-primitive-gray-dark-700: #333741;
+  --ps-primitive-gray-dark-800: #1F242F;
+  --ps-primitive-gray-dark-900: #161B26;
+  --ps-primitive-gray-dark-950: #0C111D;
 
-  /* Amber (warning) */
-  --ps-primitive-amber-50:  #FFF8E6;
-  --ps-primitive-amber-100: #FFEBB3;
-  --ps-primitive-amber-500: #E6900A;
-  --ps-primitive-amber-600: #CC7E08;
+  /* Error (red scale) — confirmed from Figma */
+  --ps-primitive-red-25:  #FFFBFA;
+  --ps-primitive-red-50:  #FEF3F2;
+  --ps-primitive-red-100: #FEE4E2;
+  --ps-primitive-red-200: #FECDCA;
+  --ps-primitive-red-300: #FDA29B;
+  --ps-primitive-red-400: #F97066;
+  --ps-primitive-red-500: #F04438;
+  --ps-primitive-red-600: #D92D20;
+  --ps-primitive-red-700: #B42318;
+  --ps-primitive-red-800: #912018;
+  --ps-primitive-red-900: #7A271A;
+  --ps-primitive-red-950: #55160C;
 
-  /* ─── Semantic color tokens ───────────────────────────────── */
+  /* Warning (amber scale) — confirmed from Figma */
+  --ps-primitive-amber-25:  #FFFCF5;
+  --ps-primitive-amber-50:  #FFFAEB;
+  --ps-primitive-amber-100: #FEF0C7;
+  --ps-primitive-amber-200: #FEDF89;
+  --ps-primitive-amber-300: #FEC84B;
+  --ps-primitive-amber-400: #FDB022;
+  --ps-primitive-amber-500: #F79009;
+  --ps-primitive-amber-600: #DC6803;
+  --ps-primitive-amber-700: #B54708;
+  --ps-primitive-amber-800: #93370D;
+  --ps-primitive-amber-900: #7A2E0E;
+  --ps-primitive-amber-950: #4E1D09;
+
+  /* Success (lime-green scale) — confirmed from Figma */
+  --ps-primitive-green-25:  #FBFFF4;
+  --ps-primitive-green-50:  #EDFAD7;
+  --ps-primitive-green-100: #DAF2AE;
+  --ps-primitive-green-200: #C8EF7F;
+  --ps-primitive-green-300: #9AD924;
+  --ps-primitive-green-400: #7EB518;
+  --ps-primitive-green-500: #71A216;
+  --ps-primitive-green-600: #6C8B15;
+  --ps-primitive-green-700: #609402;
+  --ps-primitive-green-800: #517D01;
+  --ps-primitive-green-900: #3F6001;
+  --ps-primitive-green-950: #314B01;
+
+  /* ── Semantic color tokens ──────────────────────────────────── */
+
   /* Brand */
-  --ps-color-brand-primary:          var(--ps-primitive-blue-900);
-  --ps-color-brand-primary-hover:    var(--ps-primitive-blue-800);
-  --ps-color-brand-primary-active:   var(--ps-primitive-blue-950);
-  --ps-color-brand-primary-subtle:   var(--ps-primitive-blue-50);
-  --ps-color-brand-secondary:        var(--ps-primitive-red-600);
-  --ps-color-brand-secondary-hover:  var(--ps-primitive-red-700);
+  --ps-color-brand-primary:          var(--ps-primitive-blue-600);
+  --ps-color-brand-primary-hover:    var(--ps-primitive-blue-700);
+  --ps-color-brand-primary-active:   var(--ps-primitive-blue-800);
+  --ps-color-brand-primary-subtle:   var(--ps-primitive-blue-25);
+  --ps-color-brand-secondary:        var(--ps-primitive-orange-500);
+  --ps-color-brand-secondary-hover:  var(--ps-primitive-orange-600);
 
   /* Foreground / text */
   --ps-color-fg-default:    var(--ps-primitive-neutral-900);
@@ -85,36 +131,35 @@
   --ps-color-fg-subtle:     var(--ps-primitive-neutral-400);
   --ps-color-fg-disabled:   var(--ps-primitive-neutral-300);
   --ps-color-fg-inverse:    var(--ps-primitive-neutral-0);
-  --ps-color-fg-brand:      var(--ps-primitive-blue-900);
+  --ps-color-fg-brand:      var(--ps-primitive-blue-600);
   --ps-color-fg-danger:     var(--ps-primitive-red-600);
   --ps-color-fg-success:    var(--ps-primitive-green-600);
-  --ps-color-fg-warning:    var(--ps-primitive-amber-600);
+  --ps-color-fg-warning:    var(--ps-primitive-amber-700);
 
   /* Background / surface */
   --ps-color-bg-default:    var(--ps-primitive-neutral-0);
   --ps-color-bg-subtle:     var(--ps-primitive-neutral-50);
   --ps-color-bg-muted:      var(--ps-primitive-neutral-100);
   --ps-color-bg-disabled:   var(--ps-primitive-neutral-100);
-  --ps-color-bg-overlay:    rgba(9, 13, 20, 0.5);
+  --ps-color-bg-overlay:    rgba(12, 17, 29, 0.5);
 
   /* Border */
   --ps-color-border-default:  var(--ps-primitive-neutral-200);
   --ps-color-border-strong:   var(--ps-primitive-neutral-400);
-  --ps-color-border-brand:    var(--ps-primitive-blue-900);
-  --ps-color-border-danger:   var(--ps-primitive-red-600);
+  --ps-color-border-brand:    var(--ps-primitive-blue-600);
+  --ps-color-border-danger:   var(--ps-primitive-red-500);
   --ps-color-border-focus:    var(--ps-primitive-blue-500);
 
-  /* Status */
+  /* Status backgrounds + foregrounds */
   --ps-color-status-danger-bg:   var(--ps-primitive-red-50);
   --ps-color-status-danger-fg:   var(--ps-primitive-red-700);
   --ps-color-status-success-bg:  var(--ps-primitive-green-50);
   --ps-color-status-success-fg:  var(--ps-primitive-green-700);
   --ps-color-status-warning-bg:  var(--ps-primitive-amber-50);
-  --ps-color-status-warning-fg:  var(--ps-primitive-amber-600);
+  --ps-color-status-warning-fg:  var(--ps-primitive-amber-700);
 
-  /* ─── Typography ──────────────────────────────────────────── */
-  /* PENDING: confirmar font family desde Figma */
-  --ps-font-family-sans:    'Inter', system-ui, -apple-system, sans-serif;
+  /* ── Typography — confirmed: Fira Sans ─────────────────────── */
+  --ps-font-family-sans:    'Fira Sans', system-ui, -apple-system, sans-serif;
   --ps-font-family-mono:    'JetBrains Mono', 'Fira Code', monospace;
 
   --ps-font-size-xs:   0.75rem;    /* 12px */
@@ -122,8 +167,12 @@
   --ps-font-size-md:   1rem;       /* 16px */
   --ps-font-size-lg:   1.125rem;   /* 18px */
   --ps-font-size-xl:   1.25rem;    /* 20px */
-  --ps-font-size-2xl:  1.5rem;     /* 24px */
-  --ps-font-size-3xl:  1.875rem;   /* 30px */
+  --ps-font-size-2xl:  1.5rem;     /* 24px — Display xs */
+  --ps-font-size-3xl:  1.875rem;   /* 30px — Display sm */
+  --ps-font-size-4xl:  2.25rem;    /* 36px — Display md */
+  --ps-font-size-5xl:  3rem;       /* 48px — Display lg */
+  --ps-font-size-6xl:  3.75rem;    /* 60px — Display xl */
+  --ps-font-size-7xl:  4.5rem;     /* 72px — Display 2xl */
 
   --ps-font-weight-regular:  400;
   --ps-font-weight-medium:   500;
@@ -134,13 +183,13 @@
   --ps-line-height-normal:  1.5;
   --ps-line-height-relaxed: 1.75;
 
-  /* ─── Spacing ─────────────────────────────────────────────── */
+  /* ── Spacing ────────────────────────────────────────────────── */
   --ps-spacing-0:    0;
   --ps-spacing-px:   1px;
-  --ps-spacing-0\.5: 0.125rem;  /* 2px */
-  --ps-spacing-1:    0.25rem;   /* 4px */
-  --ps-spacing-1\.5: 0.375rem;  /* 6px */
-  --ps-spacing-2:    0.5rem;    /* 8px */
+  --ps-spacing-0\.5: 0.125rem;  /*  2px */
+  --ps-spacing-1:    0.25rem;   /*  4px */
+  --ps-spacing-1\.5: 0.375rem;  /*  6px */
+  --ps-spacing-2:    0.5rem;    /*  8px */
   --ps-spacing-2\.5: 0.625rem;  /* 10px */
   --ps-spacing-3:    0.75rem;   /* 12px */
   --ps-spacing-4:    1rem;      /* 16px */
@@ -151,65 +200,84 @@
   --ps-spacing-12:   3rem;      /* 48px */
   --ps-spacing-16:   4rem;      /* 64px */
 
-  /* ─── Border radius ───────────────────────────────────────── */
+  /* ── Border radius ──────────────────────────────────────────── */
   --ps-radius-none: 0;
-  --ps-radius-sm:   0.25rem;   /* 4px */
-  --ps-radius-md:   0.375rem;  /* 6px */
-  --ps-radius-lg:   0.5rem;    /* 8px */
+  --ps-radius-xs:   0.125rem;  /*  2px */
+  --ps-radius-sm:   0.25rem;   /*  4px */
+  --ps-radius-md:   0.375rem;  /*  6px */
+  --ps-radius-lg:   0.5rem;    /*  8px */
   --ps-radius-xl:   0.75rem;   /* 12px */
   --ps-radius-2xl:  1rem;      /* 16px */
+  --ps-radius-3xl:  1.5rem;    /* 24px */
   --ps-radius-full: 9999px;
 
-  /* ─── Shadows ─────────────────────────────────────────────── */
-  --ps-shadow-xs:  0 1px 2px 0 rgba(9, 13, 20, 0.08);
-  --ps-shadow-sm:  0 1px 3px 0 rgba(9, 13, 20, 0.10), 0 1px 2px -1px rgba(9, 13, 20, 0.06);
-  --ps-shadow-md:  0 4px 6px -1px rgba(9, 13, 20, 0.10), 0 2px 4px -2px rgba(9, 13, 20, 0.06);
-  --ps-shadow-lg:  0 10px 15px -3px rgba(9, 13, 20, 0.10), 0 4px 6px -4px rgba(9, 13, 20, 0.05);
-  --ps-shadow-xl:  0 20px 25px -5px rgba(9, 13, 20, 0.10), 0 8px 10px -6px rgba(9, 13, 20, 0.05);
+  /* ── Shadows ────────────────────────────────────────────────── */
+  --ps-shadow-xs:  0 1px 2px 0 rgba(12, 17, 29, 0.08);
+  --ps-shadow-sm:  0 1px 3px 0 rgba(12, 17, 29, 0.10), 0 1px 2px -1px rgba(12, 17, 29, 0.06);
+  --ps-shadow-md:  0 4px 6px -1px rgba(12, 17, 29, 0.10), 0 2px 4px -2px rgba(12, 17, 29, 0.06);
+  --ps-shadow-lg:  0 10px 15px -3px rgba(12, 17, 29, 0.10), 0 4px 6px -4px rgba(12, 17, 29, 0.05);
+  --ps-shadow-xl:  0 20px 25px -5px rgba(12, 17, 29, 0.10), 0 8px 10px -6px rgba(12, 17, 29, 0.05);
 
-  /* ─── Focus ring ──────────────────────────────────────────── */
+  /* ── Focus ring ─────────────────────────────────────────────── */
   --ps-ring-width:  2px;
   --ps-ring-offset: 2px;
   --ps-ring-color:  var(--ps-color-border-focus);
 
-  /* ─── Transitions ─────────────────────────────────────────── */
+  /* ── Transitions ────────────────────────────────────────────── */
   --ps-duration-fast:   100ms;
   --ps-duration-normal: 150ms;
   --ps-duration-slow:   250ms;
   --ps-ease-default:    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ─── Dark mode (si Figma define un modo dark) ──────────────── */
+/* ── Dark mode (media query) ────────────────────────────────── */
 @media (prefers-color-scheme: dark) {
   :root {
-    --ps-color-fg-default:    var(--ps-primitive-neutral-50);
-    --ps-color-fg-muted:      var(--ps-primitive-neutral-400);
-    --ps-color-fg-subtle:     var(--ps-primitive-neutral-600);
-    --ps-color-fg-disabled:   var(--ps-primitive-neutral-700);
-    --ps-color-fg-inverse:    var(--ps-primitive-neutral-900);
+    --ps-color-fg-default:    var(--ps-primitive-gray-dark-25);
+    --ps-color-fg-muted:      var(--ps-primitive-gray-dark-400);
+    --ps-color-fg-subtle:     var(--ps-primitive-gray-dark-600);
+    --ps-color-fg-disabled:   var(--ps-primitive-gray-dark-700);
+    --ps-color-fg-inverse:    var(--ps-primitive-gray-dark-900);
 
-    --ps-color-bg-default:    var(--ps-primitive-neutral-900);
-    --ps-color-bg-subtle:     var(--ps-primitive-neutral-800);
-    --ps-color-bg-muted:      var(--ps-primitive-neutral-700);
-    --ps-color-bg-disabled:   var(--ps-primitive-neutral-800);
+    --ps-color-bg-default:    var(--ps-primitive-gray-dark-950);
+    --ps-color-bg-subtle:     var(--ps-primitive-gray-dark-900);
+    --ps-color-bg-muted:      var(--ps-primitive-gray-dark-800);
+    --ps-color-bg-disabled:   var(--ps-primitive-gray-dark-800);
+    --ps-color-bg-overlay:    rgba(12, 17, 29, 0.7);
 
-    --ps-color-border-default:  var(--ps-primitive-neutral-700);
-    --ps-color-border-strong:   var(--ps-primitive-neutral-500);
+    --ps-color-border-default:  var(--ps-primitive-gray-dark-700);
+    --ps-color-border-strong:   var(--ps-primitive-gray-dark-600);
+
+    --ps-color-brand-primary:        var(--ps-primitive-blue-400);
+    --ps-color-brand-primary-hover:  var(--ps-primitive-blue-300);
+    --ps-color-brand-primary-subtle: var(--ps-primitive-blue-900);
+    --ps-color-fg-brand:             var(--ps-primitive-blue-400);
+    --ps-color-border-brand:         var(--ps-primitive-blue-400);
+    --ps-color-border-focus:         var(--ps-primitive-blue-400);
   }
 }
 
+/* ── Dark mode (data attribute) ─────────────────────────────── */
 [data-ps-theme="dark"] {
-  --ps-color-fg-default:    var(--ps-primitive-neutral-50);
-  --ps-color-fg-muted:      var(--ps-primitive-neutral-400);
-  --ps-color-fg-subtle:     var(--ps-primitive-neutral-600);
-  --ps-color-fg-disabled:   var(--ps-primitive-neutral-700);
-  --ps-color-fg-inverse:    var(--ps-primitive-neutral-900);
+  --ps-color-fg-default:    var(--ps-primitive-gray-dark-25);
+  --ps-color-fg-muted:      var(--ps-primitive-gray-dark-400);
+  --ps-color-fg-subtle:     var(--ps-primitive-gray-dark-600);
+  --ps-color-fg-disabled:   var(--ps-primitive-gray-dark-700);
+  --ps-color-fg-inverse:    var(--ps-primitive-gray-dark-900);
 
-  --ps-color-bg-default:    var(--ps-primitive-neutral-900);
-  --ps-color-bg-subtle:     var(--ps-primitive-neutral-800);
-  --ps-color-bg-muted:      var(--ps-primitive-neutral-700);
-  --ps-color-bg-disabled:   var(--ps-primitive-neutral-800);
+  --ps-color-bg-default:    var(--ps-primitive-gray-dark-950);
+  --ps-color-bg-subtle:     var(--ps-primitive-gray-dark-900);
+  --ps-color-bg-muted:      var(--ps-primitive-gray-dark-800);
+  --ps-color-bg-disabled:   var(--ps-primitive-gray-dark-800);
+  --ps-color-bg-overlay:    rgba(12, 17, 29, 0.7);
 
-  --ps-color-border-default:  var(--ps-primitive-neutral-700);
-  --ps-color-border-strong:   var(--ps-primitive-neutral-500);
+  --ps-color-border-default:  var(--ps-primitive-gray-dark-700);
+  --ps-color-border-strong:   var(--ps-primitive-gray-dark-600);
+
+  --ps-color-brand-primary:        var(--ps-primitive-blue-400);
+  --ps-color-brand-primary-hover:  var(--ps-primitive-blue-300);
+  --ps-color-brand-primary-subtle: var(--ps-primitive-blue-900);
+  --ps-color-fg-brand:             var(--ps-primitive-blue-400);
+  --ps-color-border-brand:         var(--ps-primitive-blue-400);
+  --ps-color-border-focus:         var(--ps-primitive-blue-400);
 }

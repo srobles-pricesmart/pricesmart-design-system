@@ -4,13 +4,15 @@ Librería de componentes React con Tailwind CSS para aplicaciones internas de Pr
 
 ## Estado del piloto
 
-| Componente | Estado    | Figma                   |
-|------------|-----------|-------------------------|
-| Button     | ✅ Piloto | Ref: node 2210-441096 (pending confirmación exacta) |
-| Input      | ✅ Piloto | Ref: pendiente          |
-| Select     | ✅ Piloto | Ref: pendiente          |
+| Componente | Estado    | Figma                                               |
+|------------|-----------|-----------------------------------------------------|
+| Button     | ✅ Piloto | `Design System Master Library VARIABLES v4.1` / node `2210:441096` |
+| Input      | ✅ Piloto | `Design System Master Library VARIABLES v4.1`       |
+| Select     | ✅ Piloto | `Design System Master Library VARIABLES v4.1`       |
 
-> **Nota:** El archivo Figma (`Design System Master Library VARIABLES v4.1`) requiere autenticación y no fue accesible durante la construcción del piloto. Los tokens de color, tipografía y espaciado están basados en la identidad pública de PriceSmart y en los patrones típicos de un sistema de variables Figma v4.x. **Se deben reemplazar los valores primitivos en [`packages/pricesmart-ds/src/tokens/index.css`](packages/pricesmart-ds/src/tokens/index.css) con los valores exactos del archivo Figma una vez que el equipo provea acceso.**
+Los tokens primitivos en [`packages/pricesmart-ds/src/tokens/index.css`](packages/pricesmart-ds/src/tokens/index.css)
+fueron extraídos directamente del archivo Figma `uv426oS23GgupkpwKd8Efy` via Figma MCP el 2026-11-11.
+La tipografía principal es **Fira Sans** (confirmada desde la página Typography del archivo Figma).
 
 ---
 
@@ -200,26 +202,28 @@ pricesmart-design-system/
 
 ---
 
-## Actualizar tokens desde Figma
+## Paleta de colores (extraída de Figma)
 
-Una vez que tengas acceso al archivo Figma:
+| Familia               | Escala   | Uso principal                                      |
+|-----------------------|----------|----------------------------------------------------|
+| Brand Primary (blue)  | 25–950   | Botones, links, foco, bordes de marca              |
+| Brand Accent (orange) | 25–950   | Acciones secundarias, highlights                   |
+| Gray light mode       | 0–950    | Texto, superficies y bordes en modo claro          |
+| Gray dark mode        | 25–950   | Texto, superficies y bordes en modo oscuro         |
+| Error (red)           | 25–950   | Estados de error y peligro                         |
+| Warning (amber)       | 25–950   | Alertas y advertencias                             |
+| Success (lime)        | 25–950   | Confirmaciones y estados exitosos                  |
 
-1. Exportá las variables desde Figma → Plugins → Variables Exporter (o vía API con token)
-2. Reemplazá los valores en [`packages/pricesmart-ds/src/tokens/index.css`](packages/pricesmart-ds/src/tokens/index.css) manteniendo los nombres de variables (`--ps-primitive-*`, `--ps-color-*`, etc.)
-3. Corré `npm run build` en el paquete DS
-4. Las apps consumidoras reciben los nuevos tokens sin cambios en su código
+**Tipografía:** Fira Sans (Regular 400, Medium 500, Semibold 600, Bold 700)
 
 ---
 
 ## Decisiones pendientes antes de ampliar el catálogo
 
-| Tema                              | Decisión requerida                                                             |
-|-----------------------------------|--------------------------------------------------------------------------------|
-| Tokens de color exactos           | Acceso al Figma para extraer paleta primitiva y semántica real                |
-| Tipografía                        | Confirmar font family (¿Inter? ¿fuente custom PriceSmart?)                     |
-| Dark mode                         | ¿Es un requisito? Tokens incluidos pero no validados contra Figma              |
-| Registro npm                      | Configurar `publishConfig.registry` para el registro privado de PriceSmart    |
-| Turborepo                         | Para escalar el monorepo, evaluar si Turborepo mejora los tiempos de CI       |
-| Storybook chromatic               | Integración con Chromatic para visual regression testing                       |
-| Tokens adicionales                | Iconografía, motion tokens, breakpoints — pendientes de Figma                 |
-| Dialog/Modal                      | Componente `Dialog` (accesible con React Aria) como cuarto piloto sugerido    |
+| Tema                | Decisión requerida                                                        |
+|---------------------|---------------------------------------------------------------------------|
+| Registro npm        | Configurar `publishConfig.registry` para el registro privado de PriceSmart |
+| Turborepo           | Evaluar si mejora los tiempos de CI al escalar el monorepo                |
+| Storybook chromatic | Integración con Chromatic para visual regression testing                  |
+| Tokens adicionales  | Iconografía, motion tokens, breakpoints                                   |
+| Dialog/Modal        | Componente `Dialog` (accesible con React Aria) como cuarto piloto         |
