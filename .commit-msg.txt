@@ -1,0 +1,19 @@
+feat(ds): add Badge, Tag, Avatar, Checkbox, Switch, Progress, Slider, Tooltip, Menu, Icon + Storybook stories + dark mode fix
+
+- Badge: 7 color variants, 3 sizes, optional dot indicator
+- Tag: same palette as Badge with accessible removable ×button
+- Avatar: src/initials fallback, 5 sizes, online/offline/away/busy status indicator
+- Checkbox + CheckboxGroup: react-aria, indeterminate state, label/description/error
+- Switch (Toggle): react-aria, track+thumb animation, 3 sizes
+- Progress: bar (linear + indeterminate) + spinner (SVG arc), 4 colors, 3 sizes
+- Slider: react-aria, single + range dual-thumb, fill track
+- Tooltip: react-aria TooltipTrigger, 4 placements, inverse surface + arrow
+- Menu: react-aria MenuTrigger+Popover, MenuItem (danger variant, icon, shortcut), MenuSection, MenuSeparator
+- Icon: size wrapper (xs/sm/md/lg/xl) for lucide-react or any SVG icon
+- lucide-react added as peerDependency; installed as devDep in storybook + demo
+- Fix dark/light mode: data-ps-theme applied to document.documentElement
+- New semantic tokens: status-info, bg-inverse, fg-on-inverse, avatar-bg, avatar-fg
+- Storybook stories for all 10 new components (Atoms + Molecules categories)
+- Updated public API (index.ts) with all new exports
+
+Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>

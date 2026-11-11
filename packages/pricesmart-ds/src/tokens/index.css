@@ -157,6 +157,16 @@
   --ps-color-status-success-fg:  var(--ps-primitive-green-700);
   --ps-color-status-warning-bg:  var(--ps-primitive-amber-50);
   --ps-color-status-warning-fg:  var(--ps-primitive-amber-700);
+  --ps-color-status-info-bg:     var(--ps-primitive-blue-50);
+  --ps-color-status-info-fg:     var(--ps-primitive-blue-700);
+
+  /* Inverse surface (Tooltip, dark callouts) */
+  --ps-color-bg-inverse:         var(--ps-primitive-neutral-900);
+  --ps-color-fg-on-inverse:      var(--ps-primitive-neutral-0);
+
+  /* Avatar fallback */
+  --ps-color-avatar-bg:          var(--ps-primitive-blue-100);
+  --ps-color-avatar-fg:          var(--ps-primitive-blue-700);
 
   /* ── Typography — confirmed: Fira Sans ─────────────────────── */
   --ps-font-family-sans:    'Fira Sans', system-ui, -apple-system, sans-serif;
@@ -255,6 +265,38 @@
     --ps-color-border-brand:         var(--ps-primitive-blue-400);
     --ps-color-border-focus:         var(--ps-primitive-blue-400);
   }
+}
+
+/* ── Light mode (force override — negates system dark preference) ── */
+[data-ps-theme="light"] {
+  --ps-color-fg-default:    var(--ps-primitive-neutral-900);
+  --ps-color-fg-muted:      var(--ps-primitive-neutral-600);
+  --ps-color-fg-subtle:     var(--ps-primitive-neutral-400);
+  --ps-color-fg-disabled:   var(--ps-primitive-neutral-300);
+  --ps-color-fg-inverse:    var(--ps-primitive-neutral-0);
+  --ps-color-fg-brand:      var(--ps-primitive-blue-600);
+  --ps-color-fg-danger:     var(--ps-primitive-red-600);
+  --ps-color-fg-success:    var(--ps-primitive-green-600);
+  --ps-color-fg-warning:    var(--ps-primitive-amber-700);
+
+  --ps-color-bg-default:    var(--ps-primitive-neutral-0);
+  --ps-color-bg-subtle:     var(--ps-primitive-neutral-50);
+  --ps-color-bg-muted:      var(--ps-primitive-neutral-100);
+  --ps-color-bg-disabled:   var(--ps-primitive-neutral-100);
+  --ps-color-bg-overlay:    rgba(12, 17, 29, 0.5);
+
+  --ps-color-border-default:  var(--ps-primitive-neutral-200);
+  --ps-color-border-strong:   var(--ps-primitive-neutral-400);
+  --ps-color-border-brand:    var(--ps-primitive-blue-600);
+  --ps-color-border-danger:   var(--ps-primitive-red-500);
+  --ps-color-border-focus:    var(--ps-primitive-blue-500);
+
+  --ps-color-brand-primary:          var(--ps-primitive-blue-600);
+  --ps-color-brand-primary-hover:    var(--ps-primitive-blue-700);
+  --ps-color-brand-primary-active:   var(--ps-primitive-blue-800);
+  --ps-color-brand-primary-subtle:   var(--ps-primitive-blue-25);
+  --ps-color-brand-secondary:        var(--ps-primitive-orange-500);
+  --ps-color-brand-secondary-hover:  var(--ps-primitive-orange-600);
 }
 
 /* ── Dark mode (data attribute) ─────────────────────────────── */

@@ -57,6 +57,16 @@ const preset: Config = {
           'status-success-fg': 'var(--ps-color-status-success-fg)',
           'status-warning-bg': 'var(--ps-color-status-warning-bg)',
           'status-warning-fg': 'var(--ps-color-status-warning-fg)',
+          'status-info-bg':    'var(--ps-color-status-info-bg)',
+          'status-info-fg':    'var(--ps-color-status-info-fg)',
+
+          /* Inverse surface */
+          'bg-inverse':     'var(--ps-color-bg-inverse)',
+          'fg-on-inverse':  'var(--ps-color-fg-on-inverse)',
+
+          /* Avatar */
+          'avatar-bg': 'var(--ps-color-avatar-bg)',
+          'avatar-fg': 'var(--ps-color-avatar-fg)',
         },
       },
 

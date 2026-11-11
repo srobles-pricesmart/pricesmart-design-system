@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Button, Input, Select } from '@pricesmart/ds'
 
 /*
@@ -28,6 +28,10 @@ export default function App() {
   const [emailError, setEmailError] = useState('')
   const [countryError, setCountryError] = useState('')
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-ps-theme', theme)
+  }, [theme])
 
   const validate = () => {
     let valid = true
@@ -63,7 +67,6 @@ export default function App() {
 
   return (
     <div
-      data-ps-theme={theme === 'dark' ? 'dark' : ''}
       className="min-h-screen bg-ps-bg-subtle p-6 transition-colors duration-[var(--ps-duration-slow)]"
     >
       {/* Header */}
